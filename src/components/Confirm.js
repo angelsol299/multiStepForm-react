@@ -10,6 +10,12 @@ export class FormUserDetails extends Component {
     // Process form with backend //
     this.props.nextStep();
   };
+
+  back = e => {
+    e.preventDefault();
+    this.props.prevStep();
+  };
+
   render() {
     const {
       values: { firstName, lastName, email, occupation, city, bio }
@@ -28,10 +34,16 @@ export class FormUserDetails extends Component {
           </List>
           <br />
           <RaisedButton
-            label="Continue"
+            label="Confirm & Continue"
             primary={true}
             style={styles.button}
             onClick={this.continue}
+          />
+          <RaisedButton
+            label="Back"
+            primary={false}
+            style={styles.button}
+            onClick={this.back}
           />
         </React.Fragment>
       </MuiThemeProvider>
