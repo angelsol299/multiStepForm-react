@@ -33,10 +33,12 @@ export class FormUserDetails extends Component {
             onChange={handleChange("Email")}
             defaultValue={values.email}
           />
+          <br />
           <RaisedButton
             label="Continue"
             primary={true}
-            style={StyleSheet.button}
+            style={styles.button}
+            onClick={this.continue}
           />
         </React.Fragment>
       </MuiThemeProvider>

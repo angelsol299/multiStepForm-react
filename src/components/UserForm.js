@@ -21,7 +21,7 @@ export class UserForm extends Component {
   };
 
   // Go back to previous step
-  nextStep = () => {
+  prevStep = () => {
     const { step } = this.state;
     this.setState({
       step: step - 1
@@ -52,6 +52,8 @@ export class UserForm extends Component {
         return <h1>Confirm</h1>;
       case 4:
         return <h1>Success</h1>;
+      default:
+        return <h1>welcome</h1>;
     }
   }
 }
